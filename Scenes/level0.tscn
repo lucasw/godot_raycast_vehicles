@@ -45,8 +45,10 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3, 5, 
 target = NodePath("../M113")
 
 [node name="DebugUI" type="Control" parent="."]
-margin_right = 1280.0
-margin_bottom = 720.0
+margin_left = 146.0
+margin_top = 257.0
+margin_right = 1426.0
+margin_bottom = 977.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -102,4 +104,5 @@ text = "Change to 4WD vehicle"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="DebugUI/ChangeButton" to="SceneChanger" method="_on_ChangeButton_pressed"]

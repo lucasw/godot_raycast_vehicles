@@ -45,8 +45,8 @@ func _physics_process(delta) -> void:
 		var XVelocity = global_transform.basis.xform_inv(instantLinearVelocity).x
 		
 		# axis deceleration forces
-		var XForce = -global_transform.basis.x * XVelocity * (parentBody.weight * parentBody.gravity_scale)/parentBody.rayElements.size() * Xtraction * delta
-		var ZForce = -global_transform.basis.z * ZVelocity * (parentBody.weight * parentBody.gravity_scale)/parentBody.rayElements.size() * Ztraction * delta
+		var XForce = -global_transform.basis.x * XVelocity * (parentBody.weight * parentBody.gravity_scale)/parentBody.ray_wheels.size() * Xtraction * delta
+		var ZForce = -global_transform.basis.z * ZVelocity * (parentBody.weight * parentBody.gravity_scale)/parentBody.ray_wheels.size() * Ztraction * delta
 		
 		# counter sliding by negating off axis suspension impulse
 		XForce.x -= suspensionImpulse.x * parentBody.global_transform.basis.y.dot(Vector3.UP)

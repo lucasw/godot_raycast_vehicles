@@ -23,7 +23,8 @@ func _process(delta):
 script/source = "extends Label
 
 func _process(delta):
-	text = \"Physics frame time (ms): \" + String((Performance.get_monitor(Performance.TIME_PHYSICS_PROCESS ) * 1000))"
+	text = \"Physics frame time (ms): \" + String((Performance.get_monitor(Performance.TIME_PHYSICS_PROCESS ) * 1000))
+"
 
 [node name="gameRoot" type="Node"]
 
@@ -98,4 +99,5 @@ text = "Change to Tracked vehicle"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="DebugUI/ChangeButton" to="SceneChanger" method="_on_ChangeButton_pressed"]
